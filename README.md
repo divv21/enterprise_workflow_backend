@@ -11,3 +11,6 @@ A RESTful backend application built with FASTAPI to manage tasks and workflows u
 
 ##Status 
 In progress.
+
+## How to Run
+uvicorn app.main:app --reload
