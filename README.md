@@ -1,16 +1,21 @@
-# Enterprise Workflow Management Backend 
+# Enterprise Workflow Management Backend
 
-A RESTful backend application built with FASTAPI to manage tasks and workflows using role-based control.
+A production-style backend service built using FastAPI, demonstrating role-based authentication, authorization, enterprise architecture patterns, and state-managed workflow operations.
 
-## Tech Stack 
--Python 
--FastAPI 
--SQLite 
--SQLAlchemy 
--JWT Authentication 
+## Features
+- JWT authentication and password hashing (bcrypt)
+- Role-based access: ADMIN vs USER
+- Admin-controlled user provisioning
+- Task lifecycle with controlled state transitions
+- Layered architecture (routes → services → repository → models)
 
-##Status 
-In progress.
+## Tech Stack
+- FastAPI, Python
+- SQLite + SQLAlchemy ORM
+- OAuth2 + JWT
+- Uvicorn ASGI
 
-## How to Run
+## Setup
+```bash
+pip install -r requirements.txt
 uvicorn app.main:app --reload

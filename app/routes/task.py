@@ -4,6 +4,7 @@ from app.database import get_db
 from app.schemas.task import TaskCreate, TaskUpdateStatus
 from app.services.task_service import (
     create_task_service,
+    get_user_id,
     update_status_service,
     get_all_tasks,
     get_user_tasks
@@ -27,7 +28,7 @@ def list_tasks(
 ):
     if user["role"] == "ADMIN":
         return get_all_tasks(db)
-    return get_user_tasks(db, get_user_id(user))
+    return get_user_tasks(db, get_user_id(db, user))
 
 @router.patch("/{task_id}/status")
 def update_status(
