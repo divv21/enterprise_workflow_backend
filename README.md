@@ -19,3 +19,10 @@ A production-style backend service built using FastAPI, demonstrating role-based
 ```bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+```
+
+## routes
+* `/auth/login`
+* `/auth/register`
+* `/tasks/`
+* `/tasks/{task_id}/status`
